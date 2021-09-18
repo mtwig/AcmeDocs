@@ -70,7 +70,7 @@
                     <scmBranch>gh-pages</scmBranch>
                     <pubScmUrl>scm:git:git@github.com:mtwig/AcmeDocs.git</pubScmUrl>
                     <content>${project.basedir}/target/site</content>
-                    <username>41898282+github-actions[bot]@users.noreply.github.com</username>
+<!--                    <username>41898282+github-actions[bot]@users.noreply.github.com</username>-->
                 </configuration>
             </plugin>
             <plugin>
