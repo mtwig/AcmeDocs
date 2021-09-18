@@ -1,6 +1,7 @@
 # Live docs!
 
-This is a site that includes source code.
+This is a sample repo. The purpose is to demonstrate a mechanism of keeping an up-to-date style guide, and how-to documents.
 
-Write code in `src/main/java`, and document it in `site`.
-
+# Next step
+Configure this to work on multi-module projects.
+Some examples may require a complete demo project.

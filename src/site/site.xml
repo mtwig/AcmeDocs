@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/DECORATION/1.7.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 http://maven.apache.org/xsd/decoration-1.7.0.xsd"
-         name="Example Maven Site">     <!-- name attribute defines title of the site -->
+         name="AcmeDocs">     <!-- name attribute defines title of the site -->
 
     <skin>  <!-- Enable Fluido skin -->
         <groupId>org.apache.maven.skins</groupId>
@@ -10,27 +10,59 @@
     </skin>
 
     <custom>
-        <fluidoSkin>
-            <topBarEnabled>false</topBarEnabled>         <!-- Enable top menu -->
-            <sideBarEnabled>true</sideBarEnabled>      <!-- Disable left side menu -->
-        </fluidoSkin>
+        <reflowSkin>
+            <theme>bootswatch-spacelab</theme>
+            <highlightJs>true</highlightJs>
+            <brand>
+                <name>My Project</name>
+                <href>http://github.com/andriusvelykis/reflow-maven-skin</href>
+            </brand>
+            <slogan>Super interesting project doing good things.</slogan>
+            <titleTemplate>%2$s | %1$s</titleTemplate>
+            <toc>top</toc>
+            <topNav>Download|reports</topNav>
+            <bottomNav>
+                <column>Main|Download</column>
+                <column>Documentation</column>
+                <column>reports|modules</column>
+            </bottomNav>
+            <bottomDescription>
+                This is a very good project doing interesting and valuable things.
+            </bottomDescription>
+            <pages>
+                <index project="project-id">
+                    <shortTitle>Welcome</shortTitle>
+                    <breadcrumbs>false</breadcrumbs>
+                    <toc>false</toc>
+                    <sections>
+                        <carousel />
+                        <body />
+                        <sidebar />
+                        <thumbs>2</thumbs>
+                        <columns>3</columns>
+                    </sections>
+                </index>
+                <developer-info>
+                    <toc>sidebar</toc>
+                </developer-info>
+            </pages>
+        </reflowSkin>
     </custom>
 
-    <body>
-        <!--<menu ref="parent" inherit="top"/>-->       <!-- Add link to parent project to the menu (for multimodule projects) -->
-        <!--<menu ref="reports" inherit="top"/>-->      <!-- Add set of links to standard Maven reports like tests and checkstyle -->
-        <!--<menu ref="modules"/>-->                    <!-- Add set of links to modules in multimodule project -->
-        <menu name="Pages">                             <!-- Add links to pages to menu -->
-            <item name="Index" href="./index.html" />
-            <item name="Spring boot application"  href="./spring-boot-application.html" />
-            <item name="Configuration Properties" href="./configuration-properties.html" />
-            <item name="Typescript" href="./typescript.html"/>
-            <item name="HelloWorld" href="./java/hello-world.html"/>
-        </menu>
 
-<!--        <links>                                         &lt;!&ndash; Add any links to an "External Links" submenu &ndash;&gt;-->
-<!--            <item name="GitHub repository" href="https://github.com/gelin/maven-markdown"/>-->
-<!--        </links>-->
+    <body>
+        <menu name="Java" inherit="side" >
+            <item name="Style Guide" href="./java/index.html"/>
+            <item name="Hello world! 👋" href="./java/hello-world.html"/>
+        </menu>
+        <menu name="Spring" inherit="side">
+            <item name="Spring boot application"  href="./spring/spring-boot-application.html" />
+            <item name="Configuration Properties" href="./spring/configuration-properties.html" />
+        </menu>
+        <menu name="Typescript" inherit="side">
+            <item name="Interface" href="./typescript/interface.html"/>
+        </menu>
     </body>
 
+    <version position="none"/>
 </project>
