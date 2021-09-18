@@ -20,6 +20,7 @@
     <description>docs</description>
     <properties>
         <java.version>11</java.version>
+        <project.scm.id>git</project.scm.id>
     </properties>
     <dependencies>
         <dependency>
