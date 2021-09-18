@@ -11,7 +11,7 @@
 
     <custom>
         <reflowSkin>
-            <theme>bootswatch-flatly</theme>
+<!--            <theme>bootswatch-flatly</theme>-->
             <highlightJs>true</highlightJs>
             <brand>
                 <name>AcmeDocs</name>
