@@ -98,7 +98,7 @@
     <distributionManagement>
         <site>
             <id>github</id>
-            <url>scm:git:https://github.com/mtwig/AcmeDocs</url>
+            <url>scm:git:ssh://git@github.com/mtwig/AcmeDocs.git</url>
         </site>
     </distributionManagement>
 </project>
