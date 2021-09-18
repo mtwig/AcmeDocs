@@ -17,6 +17,11 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+          server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
       - name: Package
         run: mvn --batch-mode --no-transfer-progress package
       - name: Site
@@ -27,4 +32,4 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com" &&\
           git config --local user.name "github-actions[bot]" &&\
-          mvn --settings .settings.xml --batch-mode --no-transfer-progress scm-publish:publish-scm
+          mvn --batch-mode --no-transfer-progress scm-publish:publish-scm
