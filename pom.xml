@@ -21,6 +21,7 @@
     <properties>
         <java.version>11</java.version>
         <project.scm.id>git</project.scm.id>
+        <scmPublish.checkoutDirectory>${project.build.directory}/scmpublish</scmPublish.checkoutDirectory>
     </properties>
     <dependencies>
         <dependency>
@@ -61,6 +62,8 @@
                 <version>3.0.0</version>
                 <configuration>
                     <scmBranch>gh-pages</scmBranch>
+                    <pubScmUrl>scm:git:git@github.com:mtwig/AcmeDocs.git</pubScmUrl>
+                    <content>${project.basedir}/target/site</content>
                 </configuration>
             </plugin>
             <plugin>
