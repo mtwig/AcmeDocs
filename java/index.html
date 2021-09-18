@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Date-Revision-yyyymmdd" content="20210918" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>AcmeDocs &#x2013; Write a hello world project in java</title>
+    <title>AcmeDocs &#x2013; Style guide</title>
     <link rel="stylesheet" href="../css/apache-maven-fluido-1.6.min.css" />
     <link rel="stylesheet" href="../css/site.css" />
     <link rel="stylesheet" href="../css/print.css" media="print" />
@@ -35,9 +35,9 @@
           <div class="well sidebar-nav">
 <ul class="nav nav-list">
           <li class="nav-header">Java</li>
-    <li><a href="../java/index.html" title="Style Guide"><span class="none"></span>Style Guide</a>  </li>
-    <li class="active"><a href="#"><span class="none"></span>Hello world! 👋</a>
+    <li class="active"><a href="#"><span class="none"></span>Style Guide</a>
   </li>
+    <li><a href="../java/hello-world.html" title="Hello world! 👋"><span class="none"></span>Hello world! 👋</a>  </li>
           <li class="nav-header">Spring</li>
     <li><a href="../spring/spring-boot-application.html" title="Spring boot application"><span class="none"></span>Spring boot application</a>  </li>
     <li><a href="../spring/configuration-properties.html" title="Configuration Properties"><span class="none"></span>Configuration Properties</a>  </li>
@@ -55,15 +55,21 @@
           </div>
         </div>
         <div id="bodyColumn"  class="span10" >
-<h1>Write a hello world project in java</h1>
-<div class="source"><pre class="prettyprint">public class HelloWorldApplication {
-    public static void main(String[]args){
-        System.out.println(&quot;Hello world!&quot;);
-    }
-}
-</pre></div>
-
-<p>Source code for this application can be found on <a class="externalLink" href="https://github.com/mtwig/AcmeDocs/blob/main/src/main/java/com/acme/docs/DocsApplication.java">Github</a></p>
+<h1>Style guide</h1>
+<p>This is a page defines general purpose style guides.</p>
+<div class="section">
+<h2><a name="Javadoc"></a>Javadoc</h2>
+<p>All publicly available classes and methods should have Javadoc included.</p></div>
+<div class="section">
+<h2><a name="Classes"></a>Classes</h2>
+<p>Prefer immutable objects whenever possible.</p></div>
+<div class="section">
+<h2><a name="Lombok"></a>Lombok</h2>
+<p>Use Lombok to generate getters, setters, and builders.</p></div>
+<div class="section">
+<h2><a name="Self_documentation"></a>Self documentation</h2>
+<p>While Javadoc is to be written, attempt to make it unnecessary.</p>
+<p>A client of a library should not have to open Javadoc to understand the purpose of a class, or method. It should be self-evident based on the name. Javadoc can be used to clarify some non-obvious behaviours, such as Exceptions.</p></div>
         </div>
       </div>
     </div>
