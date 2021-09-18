@@ -20,4 +20,4 @@ jobs:
           branch: gh-pages
           folder: target/site
           clean: true
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
