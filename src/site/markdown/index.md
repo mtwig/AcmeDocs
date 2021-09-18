@@ -1,7 +1,8 @@
-# Live docs!
+# Section 1
 
-This is a sample repo. The purpose is to demonstrate a mechanism of keeping an up-to-date style guide, and how-to documents.
+This is some text. This is the first section.
 
-# Next step
-Configure this to work on multi-module projects.
-Some examples may require a complete demo project.
+---
+
+# Section 2
+This is the second section.

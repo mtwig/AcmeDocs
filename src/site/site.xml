@@ -3,43 +3,28 @@
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 http://maven.apache.org/xsd/decoration-1.7.0.xsd"
          name="AcmeDocs">     <!-- name attribute defines title of the site -->
 
-    <skin>  <!-- Enable Fluido skin -->
-        <groupId>org.apache.maven.skins</groupId>
-        <artifactId>maven-fluido-skin</artifactId>
-        <version>1.6</version>
+    <skin>
+        <groupId>lt.velykis.maven.skins</groupId>
+        <artifactId>reflow-maven-skin</artifactId>
+        <version>1.1.1</version>
     </skin>
 
     <custom>
         <reflowSkin>
-            <theme>bootswatch-spacelab</theme>
+            <theme>bootswatch-flatly</theme>
             <highlightJs>true</highlightJs>
             <brand>
-                <name>My Project</name>
-                <href>http://github.com/andriusvelykis/reflow-maven-skin</href>
+                <name>AcmeDocs</name>
+                <href>https://mtwig.github.io/AcmeDocs/</href>
             </brand>
-            <slogan>Super interesting project doing good things.</slogan>
-            <titleTemplate>%2$s | %1$s</titleTemplate>
-            <toc>top</toc>
-            <topNav>Download|reports</topNav>
-            <bottomNav>
-                <column>Main|Download</column>
-                <column>Documentation</column>
-                <column>reports|modules</column>
-            </bottomNav>
-            <bottomDescription>
-                This is a very good project doing interesting and valuable things.
-            </bottomDescription>
+            <toc>sidebar</toc>
             <pages>
-                <index project="project-id">
+                <index>
                     <shortTitle>Welcome</shortTitle>
-                    <breadcrumbs>false</breadcrumbs>
-                    <toc>false</toc>
+                    <breadcrumbs>true</breadcrumbs>
+                    <toc>true</toc>
                     <sections>
-                        <carousel />
-                        <body />
-                        <sidebar />
-                        <thumbs>2</thumbs>
-                        <columns>3</columns>
+                        <body/>
                     </sections>
                 </index>
                 <developer-info>
@@ -48,21 +33,20 @@
             </pages>
         </reflowSkin>
     </custom>
-
-
     <body>
-        <menu name="Java" inherit="side" >
-            <item name="Style Guide" href="./java/index.html"/>
-            <item name="Hello world! 👋" href="./java/hello-world.html"/>
-        </menu>
-        <menu name="Spring" inherit="side">
-            <item name="Spring boot application"  href="./spring/spring-boot-application.html" />
-            <item name="Configuration Properties" href="./spring/configuration-properties.html" />
-        </menu>
-        <menu name="Typescript" inherit="side">
-            <item name="Interface" href="./typescript/interface.html"/>
+        <menu name="Guides" inherit="bottom">
+            <item name="Style" href="./java/index.html"/>
+            <item name="Java">
+                <item name="Hello World" href="./java/hello-world.html"/>
+            </item>
+            <item name="Spring">
+                <item name="Beginner"/>
+                <item name="Configuration Properties" href="./spring/configuration-properties.html"/>
+            </item>
+            <item name="Typescript">
+                <item name="Beginner"/>
+                <item name="Interfaces" href="./typescript/interface.html"/>
+            </item>
         </menu>
     </body>
-
-    <version position="none"/>
 </project>

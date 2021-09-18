@@ -8,17 +8,29 @@
         <version>2.5.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-<!--    <scm>-->
-<!--        <url>https://github.com/mtwig/AcmeDocs</url>-->
-<!--        <connection>scm:git:git@github.com:mtwig/AcmeDocs.git</connection>-->
-<!--        <developerConnection>scm:git:git@github.com:mtwig/AcmeDocs.git</developerConnection>-->
-<!--    </scm>-->
+    <licenses>
+        <license>
+            <name>blah</name>
+            <comments>debugging</comments>
+        </license>
+    </licenses>
+
+    <!--    <scm>-->
+    <!--        <url>https://github.com/mtwig/AcmeDocs</url>-->
+    <!--        <connection>scm:git:git@github.com:mtwig/AcmeDocs.git</connection>-->
+    <!--        <developerConnection>scm:git:git@github.com:mtwig/AcmeDocs.git</developerConnection>-->
+    <!--    </scm>-->
     <scm>
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
         <url>git@github.com:mtwig/AcmeDocs.git</url>
         <tag>HEAD</tag>
     </scm>
+    <developers>
+        <developer>
+            <name>Matthew</name>
+        </developer>
+    </developers>
     <groupId>com.acme</groupId>
     <artifactId>docs</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -67,9 +79,9 @@
                 <version>3.7.1</version>
                 <dependencies>
                     <dependency>
-                        <groupId>lt.velykis.maven.skins</groupId>
+                        <groupId>io.github.devacfr.maven.skins</groupId>
                         <artifactId>reflow-velocity-tools</artifactId>
-                        <version>1.1.1</version>
+                        <version>2.3.0</version>
                     </dependency>
                     <!-- Reflow skin requires Velocity >= 1.7  -->
                     <dependency>
@@ -77,13 +89,18 @@
                         <artifactId>velocity</artifactId>
                         <version>1.7</version>
                     </dependency>
+                    <!--                    <dependency>-->
+                    <!--                        <groupId>com.bernardomg.maven.skins</groupId>-->
+                    <!--                        <artifactId>docs-maven-skin</artifactId>-->
+                    <!--                        <version>2.2.4</version>-->
+                    <!--                    </dependency>-->
                 </dependencies>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-project-info-reports-plugin</artifactId>-->
-<!--                <version>3.0.0</version>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-project-info-reports-plugin</artifactId>-->
+            <!--                <version>3.0.0</version>-->
+            <!--            </plugin>-->
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
@@ -103,15 +120,15 @@
 
         </plugins>
     </build>
-<!--    <reporting>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-jxr-plugin</artifactId>-->
-<!--                <version>3.1.1</version>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </reporting>-->
+    <!--    <reporting>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                <artifactId>maven-jxr-plugin</artifactId>-->
+    <!--                <version>3.1.1</version>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </reporting>-->
     <distributionManagement>
         <site>
             <id>github</id>
