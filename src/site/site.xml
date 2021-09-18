@@ -4,34 +4,16 @@
          name="AcmeDocs">     <!-- name attribute defines title of the site -->
 
     <skin>
-        <groupId>lt.velykis.maven.skins</groupId>
-        <artifactId>reflow-maven-skin</artifactId>
-        <version>1.1.1</version>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.9</version>
     </skin>
 
     <custom>
-        <reflowSkin>
-<!--            <theme>bootswatch-flatly</theme>-->
-            <highlightJs>true</highlightJs>
-            <brand>
-                <name>AcmeDocs</name>
-                <href>https://mtwig.github.io/AcmeDocs/</href>
-            </brand>
-            <toc>sidebar</toc>
-            <pages>
-                <index>
-                    <shortTitle>Welcome</shortTitle>
-                    <breadcrumbs>true</breadcrumbs>
-                    <toc>true</toc>
-                    <sections>
-                        <body/>
-                    </sections>
-                </index>
-                <developer-info>
-                    <toc>sidebar</toc>
-                </developer-info>
-            </pages>
-        </reflowSkin>
+        <fluidoSkin>
+            <topBarEnabled>true</topBarEnabled>
+            <sideBarEnabled>false</sideBarEnabled>
+        </fluidoSkin>
     </custom>
     <body>
         <menu name="Guides" inherit="bottom">
