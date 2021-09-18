@@ -34,7 +34,7 @@
     <groupId>com.acme</groupId>
     <artifactId>docs</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>docs</name>
+    <name>AcmeDocs</name>
     <description>docs</description>
     <properties>
         <java.version>11</java.version>
@@ -89,18 +89,8 @@
                         <artifactId>velocity</artifactId>
                         <version>1.7</version>
                     </dependency>
-                    <!--                    <dependency>-->
-                    <!--                        <groupId>com.bernardomg.maven.skins</groupId>-->
-                    <!--                        <artifactId>docs-maven-skin</artifactId>-->
-                    <!--                        <version>2.2.4</version>-->
-                    <!--                    </dependency>-->
                 </dependencies>
             </plugin>
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-project-info-reports-plugin</artifactId>-->
-            <!--                <version>3.0.0</version>-->
-            <!--            </plugin>-->
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
@@ -117,18 +107,8 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
-    <!--    <reporting>-->
-    <!--        <plugins>-->
-    <!--            <plugin>-->
-    <!--                <groupId>org.apache.maven.plugins</groupId>-->
-    <!--                <artifactId>maven-jxr-plugin</artifactId>-->
-    <!--                <version>3.1.1</version>-->
-    <!--            </plugin>-->
-    <!--        </plugins>-->
-    <!--    </reporting>-->
     <distributionManagement>
         <site>
             <id>github</id>
