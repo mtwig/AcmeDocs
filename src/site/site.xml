@@ -24,6 +24,7 @@
             <item name="Index" href="./index.html" />
             <item name="Spring boot application"  href="./spring-boot-application.html" />
             <item name="Configuration Properties" href="./configuration-properties.html" />
+            <item name="Typescript" href="./typescript.html"/>
         </menu>
 
 <!--        <links>                                         &lt;!&ndash; Add any links to an "External Links" submenu &ndash;&gt;-->
