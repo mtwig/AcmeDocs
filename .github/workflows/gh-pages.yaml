@@ -16,10 +16,10 @@ jobs:
       - name: Package
         run: mvn --batch-mode package
       - name: Site
-        run: mvn site:site
+        run: mvn --batch-mode site:site
       - name: Stage Site
-        run: mvn site:stage
+        run: mvn --batch-mode site:stage
       - name: Publish
-        run: mvn scm-publish:publish-scm
+        run: mvn --batch-mode scm-publish:publish-scm
 
 #        run: mvn --batch-mode site:site site:stage scm-publish:publish-scm
