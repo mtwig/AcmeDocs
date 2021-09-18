@@ -29,7 +29,7 @@ jobs:
       - name: Stage Site
         run: mvn --batch-mode --no-transfer-progress site:stage
       - name: Publish
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com" &&\
-          git config --local user.name "github-actions[bot]" &&\
-          mvn --batch-mode --no-transfer-progress scm-publish:publish-scm
+        run: mvn --batch-mode --no-transfer-progress scm-publish:publish-scm
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          access-token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
