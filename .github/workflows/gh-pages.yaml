@@ -1,11 +1,13 @@
 name: Java CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
         with:
@@ -25,6 +27,6 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          mvn --batch-mode --no-transfer-progress scm-publish:publish-scm
+          mvn -S .settings.xml --batch-mode --no-transfer-progress scm-publish:publish-scm
 
 #        run: mvn --batch-mode site:site site:stage scm-publish:publish-scm
